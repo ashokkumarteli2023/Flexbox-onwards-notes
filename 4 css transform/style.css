@@ -1,0 +1,50 @@
+/* .box{
+    width: 75px;
+    height: 75px;
+    background: rgb(54, 211, 54);
+    margin: 100px auto;
+
+    transform: rotate(45deg);
+} */
+/* weird */
+
+.box{
+    width: 75px;
+    height: 75px;
+    background: rgb(54, 211, 54);
+    margin: 100px auto;
+
+    /* transition: transform 1s ease-in-out; */
+
+    /* transform: translate(100px,-100px); */
+    /* transition: transform 1s ease-in-out; */
+
+
+    /* transition: transform 1s ease-in-out; */
+
+    transition: transform 1s ease-in-out;
+    transform-origin: top left;
+    transform-origin: 25px 25px;
+    transform-origin: 0% 100%;
+    transform-origin: 100% 100%;
+
+}
+
+.box:hover{
+    /* transform: rotate(45deg); */ 
+    /* clockwise */
+    /* transform: scaleX(2);
+    transform: scaleY(2);
+    transform: scale(2);  */
+    /* in both equal */
+    /* transform: scale(2,4); */
+
+    /* transform: translate(50px,150px); */
+
+    /* transform: skewX(50deg); */
+    /* transform: skewY(50deg); */
+    /* transform: skew(50deg,70deg); */
+
+
+    transform: rotate(360deg); 
+}

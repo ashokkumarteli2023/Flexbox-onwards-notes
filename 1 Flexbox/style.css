@@ -1,0 +1,150 @@
+/* flex-direction,flex-wrap,justify-content,align-items*/
+
+.box-wrapper{
+    border: 10px solid green;
+
+    /* to make it flex container */
+    display: flex;
+    /*flex-items width as per requirement */
+    
+
+    /* flex container property */
+    /* flex-direction: row ; */
+    
+    /*change the main-axis direction and content flow main axis ki direction mai*/
+    /* flex-direction: row-reverse;
+    flex-direction: column;
+    flex-direction: column-reverse; */
+    
+
+
+    /* flex-wrap: wrap;  */
+    /*wrap cross axis ki direction*/
+    /* flex-wrap: wrap-reverse; */
+
+    
+
+   
+    /* flex-direction: column;
+    height: 500px;  */
+    /* overflow -> flex container ke bahr ja rha flex items content */
+    /* flex-wrap: wrap;
+    flex-wrap: wrap-reverse; */
+
+
+
+    /* 2 boxes */
+    /* justify-content: flex-start;  */
+    /*main-axis ki direction me default 
+    starting me 0 space*/
+
+    /* justify-content: flex-end; */
+    /* ending me 0 space */
+    /* justify-content: center; */
+    /* center me 0 space */
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    /* justify-content: space-evenly; */
+
+    
+    /* flex-direction: column;
+    height: 1200px;
+    justify-content: flex-end; */
+
+    /* height: 700px;
+    align-items: stretch; */
+    /* cross axis ki direction me */
+
+    /* align-items: flex-start;
+    align-items: flex-end;
+    align-items: center; */
+
+    
+    
+    /* flex-direction: column; */
+    /* content km krte h */
+    /* align-items: flex-start; */
+    /* align-items: flex-end; */
+    /* align-items: center; */
+
+
+
+    /* height: 800px;
+    align-items: flex-start;
+    flex-wrap: wrap;     */
+    /* yha pr width as per requirment */
+
+    height: 800px;
+    flex-wrap: wrap;
+
+    align-items: flex-start;
+
+
+
+    align-content: flex-start;
+    /* align content jb multiple rows me content ho and unke bich me space ho 
+    cross-axis ki direction mai
+    */
+    
+    align-content: flex-end;
+    align-content: center;
+    align-content: space-around;
+    /* align-content: space-between; */
+    /* justify-content: center;  */
+
+    /* flex-flow: row nowrap; */
+    /*flex-flow== flex-direction and flex wrap */
+
+    
+
+}
+
+.box{
+    border: 2px solid red;
+    /* width: 150px;  */
+    /* km me kaam krta h w/o flex-wrap */
+    
+    /* width: 500px; */
+     /*no effect before wrap is not on*/
+    
+     /* width: 300px; */
+}
+
+.box1{
+    background-color: lightblue;
+    /* height: 300px;  */
+    
+    /* align-self: ; */
+    /* align self align items ko overadd krta */
+}
+
+.box2{
+    background-color: lightcoral;
+}
+
+.box3{
+    background-color: lightgoldenrodyellow;
+}
+
+.box4{
+    background-color: lightgreen;
+}
+
+.box5{
+    background-color: lightseagreen;
+}
+
+.box-wrapper1{
+    border: 5px solid gray;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    /* 
+    height: 300px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: space-between;
+    justify-content: center; */
+
+    /* display: none; */
+}

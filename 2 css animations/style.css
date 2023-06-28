@@ -1,0 +1,125 @@
+/* animation:animationName duration fillMode delay iterationCount timingFunction */
+
+.box{
+    height: 75px;
+    width: 75px;
+    background:red;
+
+    /* part-1 */
+    /* css-animation steps(can be applied on width/height etc) */
+
+    /* animation-name: change-bg-color;
+    animation-duration: 5s; */
+    /* 5 second ke liye rhegha */
+    /* animation-delay: 3s;
+    animation-iteration-count: 2;
+    animation-fill-mode: forwards;  */
+    /* ab green hi rhegha */
+
+    
+    /* part-2 */
+
+    /* position: relative;
+    border-radius: 50%;
+    animation-name: position-movement;
+    animation-duration: 40s;
+    animation-iteration-count: infinite; */
+    /* animation-iteration-count: 5; */
+
+    /* animation-timing-function: ease-in; */
+    /* start slow then fast */
+    /* animation-timing-function: ease-out; */
+    /* animation-timing-function: ease-in-out; */
+    
+}
+
+@keyframes change-bg-color {
+    from{
+        background: red;
+    }
+    to{
+        background: green;
+    }
+}
+
+@keyframes  position-movement{
+    0%{
+        left: 0;
+        top: 0;
+        background: lightblue;
+    }
+    25%{
+        top: 0;
+        left: 300px;
+        background: lightcoral;
+    }
+    50%{
+        top: 300px;
+        left: 300px;
+    }
+    75%{
+        top: 300px;
+        left: 0px;
+    }
+    100%{
+        top: 0;
+        left: 0;
+    }
+}
+
+
+
+.box1{
+    margin-top: 10rem;
+    width: 10px;
+    height: 10px;
+    background: black;
+
+    animation-name: width-increment;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-direction: reverse;
+}
+
+@keyframes width-increment {
+    
+    from{
+        width: 0px;
+    }
+    to{
+        width: 100px;
+    }
+}
+
+.box2
+{
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    border-radius: 50%;
+    margin-top: 5em;
+    animation: rotate 3s 1s 2 ease-in-out;
+}
+
+@keyframes  rotate{
+    0%{
+        transform: rotate(10deg);
+        background: lightblue;
+    }
+    25%{
+        transform: rotate(40deg);
+        background: lightcoral;
+    }
+    50%{
+        transform: rotate(90deg);
+        background: lightgray;
+    }
+    75%{
+        transform: rotate(150deg);
+        background: lightskyblue;
+    }
+    100%{
+        transform: rotate(220deg);
+        background: rgb(231, 231, 41);
+    }
+}

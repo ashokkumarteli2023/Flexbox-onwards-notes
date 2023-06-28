@@ -1,0 +1,26 @@
+.box{
+    width: 75px;
+    height: 75px;
+    background: lightpink;
+    margin: 2em;
+
+    transition-property: background;
+    transition-duration: 750ms;
+    transition-timing-function: ease-in-out;
+
+    /* short way */
+    /* transition: background 750ms ease-out,
+                width 750ms ease-in-out,
+                height 750ms ease-in-out; */
+            
+    transition: all 1s ease-in-out;
+}
+
+.box:hover{
+    background: lightgreen;
+    /* to fast  */
+
+    width: 150px;
+    height: 150px;
+    /* fast */
+}

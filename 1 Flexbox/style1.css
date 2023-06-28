@@ -1,0 +1,93 @@
+/* flex-items=> align-self, order, flex-basis,flex-grow, flex-shrink*/
+
+
+.box-wrapper{
+    border: 2px solid gray;
+    display: flex;
+    /* height: 350px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-flow: column wrap;
+
+    height: 1750px; */
+
+    /* width: 900px;
+    flex-wrap: wrap; */
+    
+    width: 900px;
+}
+
+.box{
+    width: 250px;
+    /* kaam nhi krgha jb tk flex-wrap on nhi hogha legha */
+
+    /* flex-basis: 350px; */
+    /* initial length main-axis ki direction mai */
+
+    /* abhi width 350 h */
+
+    /* height: 200px;
+    flex-basis: 350px; */
+    /* abhi height 350 h 
+    initial length main-axis ki direction mai (he he) */
+
+    /* flex-basis: 200px; */
+    /* flex-grow: 0; */
+    /* by default 0 space ko divide krne me kaam aata */
+    /* flex-grow: 1; */
+
+
+    /* flex-basis: 400px; */
+    /* ye shrink ho rhe h  */
+    /* flex-shrink: 1; */
+    /* by default equal shrink */
+
+    /* flex: 1 1 300px; */
+    /* 1st flex-grow, flex-shrink, flex-basis */
+}
+
+.box2{
+    background-color: #f08080;
+    /* width: 250px; */
+    /* 250px nhi hogha */
+    /* align-self: center; */
+
+    /* order: 1; */
+    /* order ke ascending order me aate h jiska bdha woh last mai */
+
+    /* flex-grow: 1; */
+
+    /* flex-shrink: 2; */
+
+    flex: 0 2 400px;
+}
+
+.box3{
+    background-color: lightgoldenrodyellow;
+    /* width: 250px; */
+    /* align-self: flex-end; */
+
+    /* order: 0; */
+
+    /* flex-grow: 1; */
+
+    /* flex-shrink: 3; */
+
+    flex: 0 3 400px;
+}
+
+.box1{
+    background-color: lightgreen;
+    /* width: 250px; */
+    /* align-self: flex-start; */
+    /* align items ko overadd */
+
+    /* order: 2; */
+
+    /* flex-grow: 2; */
+
+    /* flex-shrink: 1; */
+
+    flex: 0 1 400px;
+}
