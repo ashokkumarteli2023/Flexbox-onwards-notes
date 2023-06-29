@@ -1,0 +1,66 @@
+/* flex-items=> 
+flex-grow- ratio in which remaining space will divide b/w flex-items
+/* flex-shrink- ratio in which flex-items will shrink when available space is lesser than required space */
+    /* ex. 1 ( flex-basis=400, width:900, 3 flex-items, flex-shrink:1,2,3) 
+    sol. needed space=(400*3)-900=300
+         300=1x+2x+3x => x=50
+         means first will have 50 lesser than expected {400-50=350}
+         means second will have 50*2 lesser than expected {400-50*2=300}*/
+    
+    /* ex. 2 ( flex-basis=400, width:900, 3 flex-items, flex-shrink:4,5,6)
+    sol. needed space=(400*3)-900=300
+         300=4x+5x+6x => x=25
+         means first will have 25*3 lesser than expected {400-25*3=325}
+         means second will have 25*4 lesser than expected {400-25*4=300}
+flex: flex-grow, glex-shrink, flex-basis*/
+
+
+
+.box-wrapper{
+    border: 3px solid gray;
+    display: flex;
+    width: 900px;
+}
+
+.box{
+    /* for flex-grow */
+    /* flex-basis: 200px;
+    flex-grow: 0; */
+    /* by default 0 */ 
+    /* space ko divide krne me kaam aata */
+    
+
+    /* for flex-shrink */
+    flex-basis: 400px;
+    /* ye shrink ho rhe h  */
+    flex-shrink: 1; 
+    /* by default equal shrink*/
+
+    /* flex: 1 1 300px; */
+    /* 1st flex-grow, flex-shrink, flex-basis */
+}
+
+.box1{
+    background-color: lightgreen;
+    /* flex-grow: 2; */
+
+    flex-shrink: 1;
+    /* flex-shrink: 3; */
+}
+
+.box2{
+    background-color: #e8f080;
+    flex-grow: 1;
+    
+    flex-shrink: 2;
+    /* flex-shrink: 4; */
+}
+
+.box3{
+    background-color: lightgoldenrodyellow;
+    flex-grow: 1;
+
+    flex-shrink: 3;
+    /* flex-shrink: 5; */
+}
+

@@ -1,0 +1,68 @@
+/* flex-items=> 
+align-self- align-items ko overadd
+
+order- higher order item will go in the last(use- responsive)
+
+flex-basis- initial length in the main-axis direction
+    flex-dir=row, flex-basis as a width {width bhi denghe toh flex-basis ke acc. hi width apply hogha flex-items pr lines 42-45}
+    flex-dir=col, flex-basis as a height {same with height lines 50-53}
+*/
+
+
+
+.box-wrapper{
+    border: 3px solid gray;
+    display: flex;
+
+    height: 360px;
+    align-items: center;
+    justify-content: space-between;
+
+    
+    flex-flow: column wrap;
+}
+
+.box{
+    width: 300px;
+
+    flex-basis: 350px;
+    /* initial length main-axis ki direction mai */
+    /* always flex-basis will dominant  */
+    /* abhi width 350 h */
+    
+    /*when flex-flow: column wrap; */
+    height: 200px;
+    /* abhi height 350 h 
+    initial length main-axis ki direction mai (he he) */
+}
+
+.box1{
+    background-color: lightgreen;
+
+    width: 250px;
+    align-self: flex-start;
+    /* align items ko overadd */
+
+    
+    order: 2;
+    /* order ke ascending order me aate h jiska bdha woh last mai */
+}
+
+.box2{
+    background-color: #e8f080;
+
+    align-self: center;
+    
+
+    order: 1;
+}
+
+.box3{
+    background-color: lightgoldenrodyellow;
+
+    align-self: flex-end;
+
+    
+    order: 0;
+}
+
