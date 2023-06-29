@@ -1,120 +1,146 @@
-/* flex-direction,flex-wrap,justify-content,align-items*/
+/* flex-direction- change the main-axis direction and content will flow in the main-axis direction
+flex-wrap- items will wrap in the direction of cross-axis
+justify-content- items will align in the direction of main-axis. space distribution ke liye use hota hai.
+align-items- items will align in the direction of main-axis. space distribution ke liye use hota hai.
+align-content- multiple rows ke bich me space 
+flex-flow- flex-direction and flex wrap 
 
-.box-wrapper{
-    border: 10px solid green;
+align-self- overload align-items*/
+
+/* Follow-up => First of all comment out all the lines. Then comment in line by line and play */
+
+.box-wrapper-1{
+    border: 4px solid green;
 
     /* to make it flex container */
     display: flex;
-    /*flex-items width as per requirement */
+    
+    /*flex-items width as per availability. All items will align in single row*/
+    /*or flex-items width as per requirement ex. box-wrapper-2 . All items will align in single row*/
     
 
-    /* flex container property */
-    /* flex-direction: row ; */
+    /* flex container property-1 */
+    /* 3 boxes */
+    flex-direction: row ;   /*default*/
     
-    /*change the main-axis direction and content flow main axis ki direction mai*/
-    /* flex-direction: row-reverse;
+    /*flex-direction: change the main-axis direction. Content flow main axis ki direction mai hota hai*/
+    flex-direction: row-reverse;
     flex-direction: column;
-    flex-direction: column-reverse; */
+    flex-direction: column-reverse;
     
 
-
-    /* flex-wrap: wrap;  */
-    /*wrap cross axis ki direction*/
-    /* flex-wrap: wrap-reverse; */
-
-    
-
-   
-    /* flex-direction: column;
-    height: 500px;  */
+    /* flex container property-2 */
+    /* 3 boxes */
+    flex-direction: column;
+    height: 300px; 
     /* overflow -> flex container ke bahr ja rha flex items content */
-    /* flex-wrap: wrap;
-    flex-wrap: wrap-reverse; */
 
+    flex-wrap: wrap; 
+    /*wrap cross axis ki direction*/
+    
+    flex-wrap: wrap-reverse;
+    
 
-
+    /* flex container property-3 */
     /* 2 boxes */
-    /* justify-content: flex-start;  */
-    /*main-axis ki direction me default 
-    starting me 0 space*/
+    justify-content: flex-start; 
+    /*justify-content: main-axis ki direction me */
+    /* flex-start: starting me 0 space */
 
-    /* justify-content: flex-end; */
+    justify-content: flex-end;
     /* ending me 0 space */
-    /* justify-content: center; */
+
+    justify-content: center;
     /* center me 0 space */
-    /* justify-content: space-between; */
-    /* justify-content: space-around; */
-    /* justify-content: space-evenly; */
+    
+    justify-content: space-between; /*single flex-item then it will behave like flex-start property*/
+    justify-content: space-around; /*each flex-item ke upr and niche uniform spacing {2 items ka add ho jaegha}*/
+    justify-content: space-evenly; /*flex-items ke start, mid, and end mai uniform spacing rhghi*/ 
 
     
-    /* flex-direction: column;
-    height: 1200px;
-    justify-content: flex-end; */
-
-    /* height: 700px;
-    align-items: stretch; */
+    /* flex container property-4 */
+    /* 5 boxes */
+    height: 500px;
+    flex-wrap: wrap;
+    align-items: stretch;
     /* cross axis ki direction me */
 
-    /* align-items: flex-start;
+    align-items: flex-start;
     align-items: flex-end;
-    align-items: center; */
+    align-items: center;
 
     
-    
-    /* flex-direction: column; */
+   
+   
+   
+    /* Reset all properties to default */
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: normal; /*For flex items, the keyword "normal" behaves as stretch.*/
+
     /* content km krte h */
-    /* align-items: flex-start; */
-    /* align-items: flex-end; */
-    /* align-items: center; */
+    /* align-items: stretch;  */
+    /* stretch ho jaegnhe*/
+
+    align-items: flex-start;
+    align-items: flex-end;
+    align-items: center;
 
 
-
+    /*  1st  */
     /* height: 800px;
     align-items: flex-start;
     flex-wrap: wrap;     */
     /* yha pr width as per requirment */
 
+    /* 2nd */
     height: 800px;
     flex-wrap: wrap;
-
     align-items: flex-start;
+    /* yha pr width as per requirment */
 
 
-
+    /* flex container property-5 */
+    /* 5 boxes */
     align-content: flex-start;
-    /* align content jb multiple rows me content ho and unke bich me space ho 
-    cross-axis ki direction mai
-    */
+    /* multiple rows ke bich me space*/
+    /*cross-axis ki direction mai*/
     
     align-content: flex-end;
     align-content: center;
     align-content: space-around;
-    /* align-content: space-between; */
-    /* justify-content: center;  */
+    align-content: space-between;
+    justify-content: center; 
 
     /* flex-flow: row nowrap; */
     /*flex-flow== flex-direction and flex wrap */
 
-    
 
+    /* Reset all properties to default */
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: normal;
+    align-content: stretch;
+
+    display: none;
 }
 
 .box{
     border: 2px solid red;
-    /* width: 150px;  */
+    width: 150px; 
     /* km me kaam krta h w/o flex-wrap */
     
-    /* width: 500px; */
+    width: 500px;
      /*no effect before wrap is not on*/
-    
-     /* width: 300px; */
-}
+    }
 
 .box1{
     background-color: lightblue;
-    /* height: 300px;  */
+    height: 300px; 
     
-    /* align-self: ; */
+    align-self:center;
     /* align self align items ko overadd krta */
 }
 
@@ -134,17 +160,34 @@
     background-color: lightseagreen;
 }
 
-.box-wrapper1{
+
+
+
+/* //part-2 for revision*/
+.box-wrapper-2{
     border: 5px solid gray;
     margin-top: 5rem;
+
     display: flex;
     flex-direction: column;
-    /* 
+    
     height: 300px;
     flex-wrap: wrap;
     align-items: flex-start;
     align-content: space-between;
-    justify-content: center; */
+    justify-content: center;
 
-    /* display: none; */
+    
+}
+
+.box11{
+    background-color: aqua;
+}
+
+.box12{
+    background-color: lightcoral;
+}
+
+.box13{
+    background-color: rgb(179, 179, 35);
 }
